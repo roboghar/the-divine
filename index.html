@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri Krishna The Divine | Landmark of Luxury — 3 &amp; 4 BHK, Kanadia Road, Indore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#151310;
+    --ivory:#efe8d8;
+    --paper:#f7f3e8;
+    --brass:#a6813c;
+    --brass-light:#c9a35f;
+    --maroon:#5c1f23;
+    --sage:#5f6b4f;
+    --line: rgba(239,232,216,0.16);
+    --line-dark: rgba(21,19,16,0.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--ivory);
+    font-family:'Work Sans', sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+  .accent-serif{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+  }
+  a{color:inherit;text-decoration:none;}
+  .eyebrow{
+    font-family:'Work Sans',sans-serif;
+    font-size:11px;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--brass-light);
+    font-weight:500;
+  }
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Ornamental arch signature ---------- */
+  .arch-motif{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0.55;
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    padding:22px 0;
+    background:linear-gradient(to bottom, rgba(21,19,16,0.92), rgba(21,19,16,0));
+    transition:background .4s ease, padding .4s ease;
+  }
+  header.scrolled{
+    background:rgba(21,19,16,0.94);
+    backdrop-filter:blur(6px);
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+  }
+  .brand .name{
+    font-family:'Fraunces',serif;
+    font-size:19px;
+    letter-spacing:0.04em;
+  }
+  .brand .sub{
+    font-size:9px;
+    letter-spacing:0.24em;
+    color:var(--brass-light);
+    margin-top:4px;
+    text-transform:uppercase;
+  }
+  .navlinks{
+    display:flex;
+    gap:36px;
+    font-size:13px;
+    letter-spacing:0.04em;
+  }
+  .navlinks a{
+    opacity:0.78;
+    transition:opacity .25s;
+    position:relative;
+  }
+  .navlinks a:hover{opacity:1;}
+  .nav-cta{
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 22px;
+    border:1px solid var(--brass);
+    color:var(--ivory);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transition:background .3s, color .3s;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--brass); color:var(--ink);}
+  .btn-solid{
+    background:var(--brass);
+    color:var(--ink);
+    border:1px solid var(--brass);
+  }
+  .btn-solid:hover{background:var(--brass-light); border-color:var(--brass-light);}
+  .menu-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:140px 24px 100px;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(166,129,60,0.18), transparent 55%),
+      linear-gradient(180deg, #17140f 0%, #151310 60%, #121009 100%);
+    overflow:hidden;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:820px;
+  }
+  .hero .eyebrow{display:block; margin-bottom:22px;}
+  .hero-arches{
+    position:absolute;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:min(1100px, 150vw);
+    z-index:1;
+    opacity:0.9;
+  }
+  .hero h1{
+    font-size:clamp(48px, 9vw, 104px);
+    line-height:0.98;
+    color:var(--ivory);
+  }
+  .hero h1 .thin{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:0.42em;
+    color:var(--brass-light);
+    margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .hero-dev{
+    margin-top:26px;
+    font-size:13px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(239,232,216,0.55);
+  }
+  .hero-dev b{color:var(--ivory); font-weight:500;}
+  .hero-tags{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .tag{
+    border:1px solid var(--line);
+    padding:9px 18px;
+    font-size:12px;
+    letter-spacing:0.06em;
+    color:rgba(239,232,216,0.75);
+    border-radius:2px;
+  }
+  .hero-ctas{
+    margin-top:46px;
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .scroll-cue{
+    position:absolute;
+    bottom:36px; left:50%;
+    transform:translateX(-50%);
+    font-size:10px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:rgba(239,232,216,0.4);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .scroll-cue .line{
+    width:1px; height:40px;
+    background:linear-gradient(var(--brass-light), transparent);
+    animation:scrollpulse 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollpulse{
+    0%,100%{transform:scaleY(0.6); opacity:0.4;}
+    50%{transform:scaleY(1); opacity:1;}
+  }
+
+  /* ---------- Section shared ---------- */
+  section{
+    position:relative;
+    padding:120px 0;
+  }
+  .section-light{
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .section-light .eyebrow{color:var(--maroon);}
+  .divider{
+    width:56px; height:1px;
+    background:var(--brass);
+    margin:26px 0;
+  }
+  .divider.center{margin:26px auto;}
+
+  /* ---------- Intro / Landmark of Class ---------- */
+  .intro{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .intro-label{
+    text-align:right;
+  }
+  .intro-label .num{
+    font-family:'Fraunces',serif;
+    font-size:120px;
+    line-height:0.8;
+    color:var(--line-dark);
+    font-weight:300;
+  }
+  .intro-copy h2{
+    font-size:clamp(30px,4vw,44px);
+    line-height:1.15;
+    max-width:560px;
+  }
+  .intro-copy p{
+    margin-top:24px;
+    font-size:16.5px;
+    line-height:1.85;
+    max-width:520px;
+    color:#3a352c;
+  }
+
+  /* ---------- Facts strip (Landmark of Happiness) ---------- */
+  .facts{
+    background:var(--ink);
+    padding:90px 0;
+  }
+  .facts-head{
+    text-align:center;
+    margin-bottom:56px;
+  }
+  .facts-head h2{
+    font-size:clamp(28px,4vw,42px);
+    margin-top:16px;
+  }
+  .facts-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  .fact{
+    padding:40px 26px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+    transition:background .3s;
+  }
+  .fact:hover{background:rgba(166,129,60,0.08);}
+  .fact .fnum{
+    font-family:'Fraunces',serif;
+    color:var(--brass-light);
+    font-size:13px;
+    letter-spacing:0.1em;
+  }
+  .fact .flabel{
+    margin-top:16px;
+    font-family:'Fraunces',serif;
+    font-size:19px;
+    line-height:1.3;
+  }
+
+  /* ---------- Elegance / Lifestyle split banner ---------- */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .split-panel{
+    padding:110px 60px;
+    position:relative;
+  }
+  .split-panel.dark{background:var(--maroon); color:var(--ivory);}
+  .split-panel.gold{background:linear-gradient(145deg,#2b2416,#1a160e); color:var(--ivory); border-left:1px solid var(--line);}
+  .split-panel h2{font-size:clamp(26px,3.2vw,38px); line-height:1.2;}
+  .split-panel p{margin-top:22px; font-size:15.5px; line-height:1.85; opacity:0.85; max-width:440px;}
+  .split-list{
+    margin-top:34px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .split-list li{
+    list-style:none;
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    font-size:15px;
+    letter-spacing:0.02em;
+  }
+  .split-list li::before{
+    content:'';
+    width:6px;height:6px;
+    background:var(--brass-light);
+    border-radius:50%;
+    flex-shrink:0;
+    transform:translateY(-2px);
+  }
+
+  /* ---------- Amenities (Landmark of Comfort) ---------- */
+  .amenities-head{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 70px;
+  }
+  .amenities-head p{
+    margin-top:22px;
+    font-size:16px;
+    line-height:1.85;
+    color:#3a352c;
+  }
+  .amen-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:2px;
+    background:var(--line-dark);
+  }
+  .amen{
+    background:var(--paper);
+    padding:44px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    min-height:200px;
+    transition:transform .35s, box-shadow .35s;
+  }
+  .amen:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(21,19,16,0.12);
+    background:#fffdf6;
+    z-index:2;
+  }
+  .amen .aicon{
+    width:34px;height:34px;
+    color:var(--maroon);
+  }
+  .amen h3{
+    font-size:18px;
+    font-family:'Fraunces',serif;
+    line-height:1.3;
+  }
+  .amen .atag{
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-top:auto;
+  }
+
+  /* ---------- Floor plans ---------- */
+  .plans-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-bottom:60px;
+  }
+  .plans-head h2{font-size:clamp(30px,4vw,46px);}
+  .plans-note{
+    max-width:360px;
+    font-size:14.5px;
+    line-height:1.7;
+    color:rgba(239,232,216,0.6);
+  }
+  .plan-tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:44px;
+    flex-wrap:wrap;
+  }
+  .plan-tab{
+    padding:12px 24px;
+    border:1px solid var(--line);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    cursor:pointer;
+    background:transparent;
+    color:var(--ivory);
+    transition:all .25s;
+  }
+  .plan-tab.active, .plan-tab:hover{
+    background:var(--brass);
+    color:var(--ink);
+    border-color:var(--brass);
+  }
+  .plan-grid{
+    display:none;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .plan-grid.active{display:grid;}
+  .plan-info .ptype{
+    font-family:'Fraunces',serif;
+    font-size:52px;
+  }
+  .plan-info .parea{
+    margin-top:10px;
+    font-size:15px;
+    letter-spacing:0.08em;
+    color:var(--brass-light);
+    text-transform:uppercase;
+  }
+  .plan-info p{
+    margin-top:24px;
+    font-size:15px;
+    line-height:1.85;
+    color:rgba(239,232,216,0.72);
+    max-width:420px;
+  }
+  .plan-image{
+    background:var(--paper);
+    padding:18px;
+  }
+  .plan-image img{
+    width:100%;
+    display:block;
+  }
+
+  /* ---------- Master Layout ---------- */
+  .layout-section{
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .layout-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .layout-grid img{
+    width:100%;
+    display:block;
+    box-shadow:0 30px 60px rgba(21,19,16,0.14);
+  }
+  .layout-copy h2{font-size:clamp(28px,4vw,42px); line-height:1.2;}
+  .layout-copy p{margin-top:22px; font-size:15.5px; line-height:1.85; color:#3a352c; max-width:460px;}
+
+  /* ---------- Location ---------- */
+  .location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .location-image{
+    background:var(--ivory);
+    padding:14px;
+  }
+  .location-image img{width:100%; display:block;}
+  .loc-list{
+    margin-top:32px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 30px;
+  }
+  .loc-list div{
+    font-size:14px;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .loc-list span{color:var(--brass-light); font-size:12px; letter-spacing:0.04em;}
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:linear-gradient(180deg,#151310,#1c1811);
+    text-align:center;
+  }
+  .contact-inner{max-width:640px; margin:0 auto;}
+  .contact h2{font-size:clamp(34px,5vw,58px); line-height:1.1;}
+  .contact p{margin-top:22px; font-size:16px; line-height:1.8; color:rgba(239,232,216,0.65);}
+  .contact-phone{
+    margin-top:44px;
+    display:inline-flex;
+    align-items:center;
+    gap:16px;
+    padding:22px 40px;
+    border:1px solid var(--brass);
+  }
+  .contact-phone .num{
+    font-family:'Fraunces',serif;
+    font-size:28px;
+    letter-spacing:0.02em;
+  }
+  .contact-actions{
+    margin-top:28px;
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .contact-sub{
+    margin-top:50px;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:rgba(239,232,216,0.4);
+  }
+
+  footer{
+    padding:40px 0;
+    border-top:1px solid var(--line);
+    background:var(--ink);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+    font-size:12px;
+    color:rgba(239,232,216,0.45);
+    letter-spacing:0.03em;
+  }
+  .footer-inner a{color:var(--brass-light);}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .9s ease, transform .9s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .navlinks{display:none;}
+    .intro, .layout-grid, .location-grid, .plan-grid.active{grid-template-columns:1fr;}
+    .intro-label{text-align:left;}
+    .intro-label .num{font-size:70px;}
+    .facts-grid, .amen-grid{grid-template-columns:repeat(2,1fr);}
+    .split{grid-template-columns:1fr;}
+    .split-panel{padding:70px 34px;}
+    section{padding:80px 0;}
+    .loc-list{grid-template-columns:1fr;}
+  }
+  @media (max-width: 520px){
+    .wrap{padding:0 20px;}
+    .facts-grid, .amen-grid{grid-template-columns:1fr 1fr;}
+    .contact-phone{flex-direction:column; gap:6px; padding:22px 26px;}
+    .hero-ctas .btn{width:100%; justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav class="wrap">
+    <div class="brand">
+      <span class="name">The Divine</span>
+      <span class="sub">Shri Krishna Devcon</span>
+    </div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#plans">Floor Plans</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-solid" href="tel:+917389870097">Call Now</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <svg class="hero-arches" viewBox="0 0 1100 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="archGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#a6813c" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#a6813c" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="M50 480 L50 260 A200 200 0 0 1 450 260 L450 480" fill="none" stroke="url(#archGrad)" stroke-width="1"/>
+    <path d="M650 480 L650 200 A300 300 0 0 1 1250 200 L1250 480" fill="none" stroke="url(#archGrad)" stroke-width="1"/>
+    <path d="M250 480 L250 150 A300 300 0 0 1 850 150 L850 480" fill="none" stroke="url(#archGrad)" stroke-width="1.4" opacity="0.7"/>
+  </svg>
+  <div class="hero-inner">
+    <span class="eyebrow">Kanadia Road · Indore</span>
+    <h1>THE DIVINE<span class="thin">a landmark of luxury</span></h1>
+    <div class="hero-dev">By <b>Shrikrishna Devcon Limited</b></div>
+    <div class="hero-tags">
+      <span class="tag">3 &amp; 4 BHK Luxurious Apartments</span>
+      <span class="tag">Vastu-Friendly</span>
+      <span class="tag">3-Side Open Flats</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="tel:+917389870097">📞 +91 73898 70097</a>
+      <a class="btn" href="#plans">View Floor Plans</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ================= ABOUT / LANDMARK OF CLASS ================= -->
+<section class="section-light" id="about">
+  <div class="wrap intro reveal">
+    <div class="intro-label">
+      <span class="eyebrow">Landmark of Class</span>
+      <div class="num">01</div>
+    </div>
+    <div class="intro-copy">
+      <h2>A harmonious living experience, shaped by balance and intention.</h2>
+      <div class="divider"></div>
+      <p>The Divine is envisioned as a harmonious living experience shaped by balance and intention. Every space is planned to blend modern luxury with warmth and functionality. Here, architecture supports life, comfort feels natural, and elegance is effortless.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LANDMARK OF HAPPINESS — FACTS STRIP ================= -->
+<section class="facts">
+  <div class="wrap">
+    <div class="facts-head reveal">
+      <span class="eyebrow">Landmark of Happiness</span>
+      <h2>A subtle preview of architecture that speaks<br class="dh"> through proportion and presence.</h2>
+    </div>
+    <div class="facts-grid reveal">
+      <div class="fact"><div class="fnum">I</div><div class="flabel">Multipurpose<br>Hall</div></div>
+      <div class="fact"><div class="fnum">II</div><div class="flabel">3 Side Open<br>Flats</div></div>
+      <div class="fact"><div class="fnum">III</div><div class="flabel">2 Fast<br>Elevators</div></div>
+      <div class="fact"><div class="fnum">IV</div><div class="flabel">Two<br>Entrances</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ELEGANCE + LIFESTYLE SPLIT ================= -->
+<section style="padding:0;">
+  <div class="split">
+    <div class="split-panel dark reveal">
+      <span class="eyebrow" style="color:var(--brass-light)">Landmark of Elegance</span>
+      <h2>Where sophistication meets comfort.</h2>
+      <p>Shri Krishna The Divine is envisioned as a space where sophistication meets comfort. Every corner is thoughtfully designed to reflect timeless elegance, while modern amenities ensure effortless living. Here, architecture and interiors come together in perfect harmony.</p>
+    </div>
+    <div class="split-panel gold reveal">
+      <span class="eyebrow">Landmark of Lifestyle</span>
+      <h2>Clean lines, layered balconies, timeless materials.</h2>
+      <p>A contemporary way of living, defined by clean look, layered balconies, and timeless materials. Designed to feel elegant today and remain relevant for years to come.</p>
+      <ul class="split-list">
+        <li>Vastu-Friendly Homes</li>
+        <li>Two-Way Security System</li>
+        <li>Double-Height Entry Lobby</li>
+        <li>Servant Room*</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AMENITIES / LANDMARK OF COMFORT ================= -->
+<section class="section-light" id="amenities">
+  <div class="wrap">
+    <div class="amenities-head reveal">
+      <span class="eyebrow">Landmark of Comfort</span>
+      <h2>Designed for effortless everyday living</h2>
+      <p>Open balconies, elegant interiors, and vastu-aligned planning create natural balance. Dedicated spaces for sports, fitness, and mindfulness support wellness, family time, and inner peace — because true comfort goes beyond convenience.</p>
+    </div>
+  </div>
+  <div class="wrap reveal">
+    <div class="amen-grid">
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 21V9l8-6 8 6v12M9 21v-7h6v7"/></svg>
+        <h3>23 Feet Open Balconies</h3>
+        <span class="atag">Open Living</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        <h3>Multi-Purpose Court</h3>
+        <span class="atag">Pickleball · Badminton · Half-Basketball</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-4 8M12 13l4 8M8 11l-3 2M16 11l3 2"/></svg>
+        <h3>Yoga</h3>
+        <span class="atag">Wellness Deck</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="8" width="18" height="10" rx="1"/><circle cx="7.5" cy="18" r="1.4"/><circle cx="16.5" cy="18" r="1.4"/></svg>
+        <h3>Dedicated 2 Car Parking</h3>
+        <span class="atag">Per Residence</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20h16M6 20V10l6-4 6 4v10M9 20v-5h6v5"/></svg>
+        <h3>Terrace Garden</h3>
+        <span class="atag">Landscaped Green</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="7" r="3"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg>
+        <h3>Kid's Play Area</h3>
+        <span class="atag">For The Little Ones</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v3M8 9h8l2 11H6L8 9zM10 9V6a2 2 0 0 1 4 0v3"/></svg>
+        <h3>Temple</h3>
+        <span class="atag">Sacred Space</span>
+      </div>
+      <div class="amen">
+        <svg class="aicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l2.5 5 5.5.8-4 4 1 5.5-5-2.6-5 2.6 1-5.5-4-4 5.5-.8L12 3z"/></svg>
+        <h3>Vastu-Aligned Planning</h3>
+        <span class="atag">Natural Balance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLOOR PLANS ================= -->
+<section id="plans">
+  <div class="wrap">
+    <div class="plans-head reveal">
+      <div>
+        <span class="eyebrow">Residences</span>
+        <h2>Floor Plans</h2>
+      </div>
+      <p class="plans-note">Thoughtfully laid out 3 &amp; 4 BHK residences with three-side open exposure, generous balconies, and vastu-aligned design.</p>
+    </div>
+
+    <div class="plan-tabs reveal">
+      <button class="plan-tab active" data-plan="p1">4 BHK — 4330 sq ft (A)</button>
+      <button class="plan-tab" data-plan="p2">4 BHK — 4330 sq ft (B)</button>
+      <button class="plan-tab" data-plan="p3">3 BHK — 2859 sq ft</button>
+      <button class="plan-tab" data-plan="p4">3 BHK — 3237 sq ft</button>
+    </div>
+
+    <div class="plan-grid active reveal" id="p1">
+      <div class="plan-info">
+        <div class="ptype">4 BHK</div>
+        <div class="parea">4330 Sq Ft · Type A</div>
+        <p>An expansive four-bedroom residence with three-side open exposure, designed for large families who value both grandeur and privacy.</p>
+        <a class="btn" href="tel:+917389870097" style="margin-top:28px;">Enquire About This Plan</a>
+      </div>
+      <div class="plan-image"><img src="images/floor-4bhk-a.jpg" alt="4 BHK 4330 sq ft floor plan, type A"></div>
+    </div>
+
+    <div class="plan-grid" id="p2">
+      <div class="plan-info">
+        <div class="ptype">4 BHK</div>
+        <div class="parea">4330 Sq Ft · Type B</div>
+        <p>A mirrored layout of the signature 4 BHK residence, offering the same generous proportions oriented for a different aspect.</p>
+        <a class="btn" href="tel:+917389870097" style="margin-top:28px;">Enquire About This Plan</a>
+      </div>
+      <div class="plan-image"><img src="images/floor-4bhk-b.jpg" alt="4 BHK 4330 sq ft floor plan, type B"></div>
+    </div>
+
+    <div class="plan-grid" id="p3">
+      <div class="plan-info">
+        <div class="ptype">3 BHK</div>
+        <div class="parea">2859 Sq Ft</div>
+        <p>A refined three-bedroom home balancing comfortable living spaces with efficient, vastu-friendly planning.</p>
+        <a class="btn" href="tel:+917389870097" style="margin-top:28px;">Enquire About This Plan</a>
+      </div>
+      <div class="plan-image"><img src="images/floor-3bhk-a.jpg" alt="3 BHK 2859 sq ft floor plan"></div>
+    </div>
+
+    <div class="plan-grid" id="p4">
+      <div class="plan-info">
+        <div class="ptype">3 BHK</div>
+        <div class="parea">3237 Sq Ft</div>
+        <p>A larger three-bedroom variant with additional living area, ideal for those seeking extra room to breathe.</p>
+        <a class="btn" href="tel:+917389870097" style="margin-top:28px;">Enquire About This Plan</a>
+      </div>
+      <div class="plan-image"><img src="images/floor-3bhk-b.jpg" alt="3 BHK 3237 sq ft floor plan"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MASTER LAYOUT ================= -->
+<section class="layout-section">
+  <div class="wrap layout-grid reveal">
+    <div class="layout-copy">
+      <span class="eyebrow">Site Plan</span>
+      <h2>Master Layout Plan</h2>
+      <div class="divider"></div>
+      <p>A considered master layout that balances built form with open space — positioning towers, entrances, and amenities for light, ventilation, and ease of movement across the site.</p>
+    </div>
+    <img src="images/master-layout.jpg" alt="Master layout plan of Shri Krishna The Divine">
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section id="location">
+  <div class="wrap">
+    <div class="location-grid reveal">
+      <div>
+        <span class="eyebrow">Location</span>
+        <h2>On Kanadia Road, Indore</h2>
+        <div class="divider"></div>
+        <p style="font-size:15.5px; line-height:1.85; color:rgba(239,232,216,0.68); max-width:440px;">Perfectly positioned on Kanadia Road with easy access to schools, hospitals, malls, and the city's key squares.</p>
+        <div class="loc-list">
+          <div>IPS School <span>Nearby</span></div>
+          <div>Agarwal Public School <span>Nearby</span></div>
+          <div>Phoenix Hospital <span>Nearby</span></div>
+          <div>Zodiac Mall <span>Nearby</span></div>
+          <div>Mayank Blue Water Park <span>Nearby</span></div>
+          <div>Mourya Garden <span>Nearby</span></div>
+          <div>Hanuman Mandir <span>Nearby</span></div>
+          <div>New District Court <span>Nearby</span></div>
+          <div>Bhandari Square <span>Route</span></div>
+          <div>Bicholi Square <span>Route</span></div>
+          <div>Bengali Square <span>Route</span></div>
+          <div>Worldcup Square <span>Route</span></div>
+        </div>
+      </div>
+      <div class="location-image">
+        <img src="images/location-map.jpg" alt="Location map of Shri Krishna The Divine on Kanadia Road">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-inner reveal">
+    <span class="eyebrow">Get In Touch</span>
+    <h2>Book Your Visit to The Divine</h2>
+    <p>Speak with our sales team to schedule a site visit, view available residences, and get complete pricing details for Shri Krishna The Divine.</p>
+    <a class="contact-phone" href="tel:+917389870097">
+      <span>📞</span>
+      <span class="num">+91 73898 70097</span>
+    </a>
+    <div class="contact-actions">
+      <a class="btn btn-solid" href="tel:+917389870097">Call Now</a>
+      <a class="btn" href="https://wa.me/917389870097" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn" href="mailto:info@shrikrishnadevcon.com">Email Enquiry</a>
+    </div>
+    <div class="contact-sub">Shrikrishna Devcon Limited · Kanadia Road, Indore, Madhya Pradesh</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span id="year"></span> Shri Krishna The Divine · Shrikrishna Devcon Limited</div>
+    <div>All floor plans &amp; specifications are indicative and subject to change · <a href="tel:+917389870097">+91 73898 70097</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // floor plan tabs
+  const tabs = document.querySelectorAll('.plan-tab');
+  const grids = document.querySelectorAll('.plan-grid');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      grids.forEach(g => g.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.plan).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
